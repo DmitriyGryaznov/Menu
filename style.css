@@ -1,0 +1,183 @@
+html {
+	color: #1B1C21;
+	font-family: "TT Lakes";
+	font-size: 14px;
+}
+
+body {
+	background-color: #F8F8F8;
+}
+
+.wrapper {}
+
+/*Меню шапка*/
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	max-height: 1024px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: 24px;
+	padding-bottom: 32px;
+}
+
+.button {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: #FF3E79;
+}
+
+@media (min-width: 425px) {
+	.menu {
+		width: 320px;
+	}
+}
+
+.menu--style {
+	box-shadow: -50px 0px 100px 5px black;
+	background-color: #FFF;
+}
+
+.header-menu {
+	display: flex;
+	align-items: center;
+	padding: 0px 24px 50px 24px;
+	justify-content: space-between;
+}
+
+.menu__element:first-child {
+	padding-bottom: 16px;
+}
+
+.header-menu__logo {
+	margin-left: 16px;
+	margin-right: auto;
+}
+
+.button--animation:hover {
+	filter: brightness(0.8);
+}
+
+.button--animation {
+	transition: 0.3s ease;
+}
+
+/*Тело*/
+
+.nav-menu {
+	display: flex;
+	flex-direction: column;
+	row-gap: 28px;
+}
+
+.nav-menu__element {
+	position: relative;
+	height: 32px;
+}
+
+.nav-menu__text {
+	padding: 16px 24px;
+}
+
+.nav-menu__text--style {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+}
+
+.nav-menu__element--animation:hover::before {
+	left: 0px;
+}
+
+.nav-menu__element--animation::before {
+	position: absolute;
+	content: url("../img/highlight.svg");
+	left: -4px;
+	bottom: 8px;
+	height: 32px;
+	transition: left 250ms ease-in-out;
+}
+
+.nav-menu__text--animation:hover {
+	color: #7E7E82;
+}
+
+.nav-menu__text--animation {
+	color: #1B1C21;
+	transition: 300ms ease;
+}
+
+/*Подвал*/
+
+.foo-menu {
+	display: flex;
+	flex-direction: column;
+	padding-left: 24px;
+	row-gap: 8px;
+}
+
+@media (min-width: 425px) and (min-height: 745px) {
+	.foo-menu {
+		row-gap: 40px;
+	}
+}
+
+.up-sec {
+	display: flex;
+	flex-direction: column;
+}
+
+.up-sec__buttons {
+	display: flex;
+	column-gap: 16px;
+}
+
+.up-sec__email {
+	margin-top: 16px;
+	margin-bottom: 12px;
+}
+
+.up-sec__email--style {
+	color: #1B1C21;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+}
+
+.up-sec__tel--style {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 32px;
+	letter-spacing: -0.6px;
+}
+
+.down-sec {
+	display: flex;
+}
+
+.down-sec__text {
+	padding-right: 7px;
+}
+
+.down-sec__check--hidden {
+	overflow: auto;
+	width: 1px;
+	height: 1px;
+	visibility: hidden;
+}
+
+.down-sec__check:checked+.down-sec__text--animation {
+	color: #7E7E82;
+}
+
+.down-sec__text--animation {
+	color: #1B1C21;
+	transition: 250ms ease;
+}
