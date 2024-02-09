@@ -30,7 +30,33 @@ body {
 	height: 40px;
 	border-radius: 20px;
 	background-color: #FF3E79;
+	background-image: url();
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: center;
 }
+
+.burger {
+	background-image: url('../img/burger.svg');
+}
+
+.lupa {
+	background-image: url('../img/lupa.svg');
+}
+
+.phone {
+	background-image: url('../img/phone.svg');
+}
+
+.chat {
+	background-image: url('../img/chat.svg');
+}
+
+.profile {
+	background-image: url('../img/profile.svg');
+}
+
 
 @media (min-width: 425px) {
 	.menu {
@@ -122,10 +148,18 @@ body {
 	row-gap: 8px;
 }
 
+a {
+	color: black;
+}
+
 @media (min-width: 425px) and (min-height: 745px) {
 	.foo-menu {
 		row-gap: 40px;
 	}
+}
+
+.foo-menu__element {
+	display: flex;
 }
 
 .up-sec {
@@ -160,6 +194,13 @@ body {
 
 .down-sec {
 	display: flex;
+	width: 25px;
+	height: 24px;
+}
+
+.lang {
+	width: 87px;
+	height: 24px;
 }
 
 .down-sec__text {
